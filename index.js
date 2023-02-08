@@ -7,12 +7,13 @@ function Book(author, title, noOfPages, readQ) {
   this.readQ = readQ;
 }
 
-let 
+let deepWork = new Book("Cal Newport", "Deep Work", 255, true);
 
-
-function addBookToLibrary() {}
-
-
-function displayBooks(){
-
+function addBookToLibrary(book) {
+  myLibrary.push(book);
 }
+
+addBookToLibrary(deepWork);
+console.log(myLibrary);
+
+function displayBooks() {}
