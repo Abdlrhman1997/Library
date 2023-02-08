@@ -28,7 +28,8 @@ function displayBooks(libraryArray) {
 
     title.style.marginLeft = "25%";
     title.style.marginBottom = ".2em";
-    title.style.color = "red";
+    title.style.color = "purple";
+    title.style.fontSize = "1.4em";
 
     author.innerText = "By: ";
     noOfPages.innerText = "no of pages: ";
