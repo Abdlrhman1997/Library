@@ -26,10 +26,17 @@ function displayBooks(libraryArray) {
     let noOfPages = document.createElement("p");
     let readQ = document.createElement("p");
 
-    title = libraryArray[i].title;
-    author = libraryArray[i].author;
-    noOfPages = libraryArray[i].noOfPages;
-    readQ = libraryArray[i].readQ;
+    title.style.marginLeft = "25%";
+    title.style.marginBottom = ".2em";
+    title.style.color = "red";
+
+    author.innerText = "By: ";
+    noOfPages.innerText = "no of pages: ";
+
+    title.innerText = libraryArray[i].title;
+    author.innerText += libraryArray[i].author;
+    noOfPages.innerText += libraryArray[i].noOfPages;
+    readQ.innerText = libraryArray[i].readQ;
 
     card.append(title);
     card.append(author);
