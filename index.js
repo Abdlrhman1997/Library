@@ -32,7 +32,7 @@ function displayBooks(libraryArray) {
     title.style.fontSize = "1.4em";
 
     author.innerText = "By: ";
-    noOfPages.innerText = "no of pages: ";
+    noOfPages.innerText = "pages: ";
 
     title.innerText = libraryArray[i].title;
     author.innerText += libraryArray[i].author;
