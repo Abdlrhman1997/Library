@@ -25,11 +25,10 @@ function displayBooks(libraryArray) {
     let author = document.createElement("p");
     let noOfPages = document.createElement("p");
     let readQ = document.createElement("p");
+    let img = document.createElement("img");
 
-    title.style.marginLeft = "25%";
-    title.style.marginBottom = ".2em";
-    title.style.color = "purple";
-    title.style.fontSize = "1.4em";
+    img.src = "false.png";
+    title.id = "title";
 
     author.innerText = "By: ";
     noOfPages.innerText = "pages: ";
@@ -39,6 +38,7 @@ function displayBooks(libraryArray) {
     noOfPages.innerText += libraryArray[i].noOfPages;
     readQ.innerText = libraryArray[i].readQ;
 
+    card.append(img);
     card.append(title);
     card.append(author);
     card.append(noOfPages);

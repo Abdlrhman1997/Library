@@ -50,4 +50,12 @@ body {
 #container div img {
   width: 25px;
   height: 25px;
+  margin-left: 15em;
+}
+
+#title {
+  margin-left: 25%;
+  margin-bottom: 0.2em;
+  color: purple;
+  font-size: 1.4em;
 }
