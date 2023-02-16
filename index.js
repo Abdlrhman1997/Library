@@ -17,6 +17,10 @@ function addBookToLibrary(book) {
 addBookToLibrary(deepWork);
 addBookToLibrary(atomicHabits);
 
+// <label class="switch">
+//   <input type="checkbox">
+//   <span class="slider round"></span>
+// </label>
 let divCardsContainer = document.querySelector("#container");
 function displayBooks(libraryArray) {
   for (let i = 0; i < libraryArray.length; i++) {
@@ -26,6 +30,17 @@ function displayBooks(libraryArray) {
     let noOfPages = document.createElement("p");
     let readQ = document.createElement("p");
     let img = document.createElement("img");
+    let label = document.createElement("label");
+    let input = document.createElement("input");
+    let span = document.createElement("span");
+
+    label.className = "switch";
+    input.type = "checkbox";
+    // span.className = "slider round";
+    span.classList.add("slider", "round");
+
+    label.append(input);
+    label.append(span);
 
     img.src = "false.png";
     title.id = "title";
@@ -43,6 +58,7 @@ function displayBooks(libraryArray) {
     card.append(author);
     card.append(noOfPages);
     card.append(readQ);
+    card.append(label);
 
     divCardsContainer.append(card);
 
