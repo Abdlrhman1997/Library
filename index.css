@@ -46,3 +46,8 @@ body {
   border-radius: 12px;
   box-shadow: 0 8px 6px -6px black;
 }
+
+#container div img {
+  width: 25px;
+  height: 25px;
+}
