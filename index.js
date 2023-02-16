@@ -45,6 +45,10 @@ function displayBooks(libraryArray) {
     card.append(readQ);
 
     divCardsContainer.append(card);
+
+    img.addEventListener("click", function () {
+      card.remove();
+    });
   }
 }
 
