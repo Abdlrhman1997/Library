@@ -17,10 +17,6 @@ function addBookToLibrary(book) {
 addBookToLibrary(deepWork);
 addBookToLibrary(atomicHabits);
 
-// <label class="switch">
-//   <input type="checkbox">
-//   <span class="slider round"></span>
-// </label>
 let divCardsContainer = document.querySelector("#container");
 function displayBooks(libraryArray) {
   for (let i = 0; i < libraryArray.length; i++) {
@@ -64,6 +60,14 @@ function displayBooks(libraryArray) {
 
     img.addEventListener("click", function () {
       card.remove();
+    });
+
+    input.addEventListener("click", function () {
+      if (card.style.backgroundColor === "blanchedalmond") {
+        card.style.backgroundColor = "#E96479";
+      } else {
+        card.style.backgroundColor = "blanchedalmond";
+      }
     });
   }
 }
