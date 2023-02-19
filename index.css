@@ -48,6 +48,17 @@ body {
   background: #beb0b0;
 }
 
+#divForm {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  width: 25%;
+  position: absolute;
+  left: 40%;
+  top: 25%;
+}
+
 #container {
   width: 100%;
   height: 100%;

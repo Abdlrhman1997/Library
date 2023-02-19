@@ -18,6 +18,33 @@ function addBookToLibrary(book) {
 addBookToLibrary(deepWork);
 addBookToLibrary(atomicHabits);
 
+function popUpForm() {
+  let divForm = document.createElement("div");
+  let form = document.createElement("forum");
+  let title = document.createElement("p");
+  title.innerText = "Add new book";
+  divForm.id = "divForm";
+
+  let Title = document.createElement("input");
+  let author = document.createElement("input");
+  let pages = document.createElement("input");
+
+  let submit = document.createElement("button");
+
+  form.append(Title);
+  form.append(author);
+  form.append(pages);
+  form.append(submit);
+  divForm.append(form);
+
+  document.body.append(divForm);
+}
+
+let addBttn = document.querySelector("#add");
+addBttn.addEventListener("click", function () {
+  popUpForm();
+});
+
 let divCardsContainer = document.querySelector("#container");
 function displayBooks(libraryArray) {
   for (let i = 0; i < libraryArray.length; i++) {
