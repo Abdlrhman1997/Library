@@ -7,8 +7,8 @@ function Book(author, title, noOfPages, readQ) {
   this.readQ = readQ;
 }
 
-let deepWork = new Book("Cal Newport", "Deep Work", 255, true);
-let atomicHabits = new Book("James Clear", "Atomic Habits", 300, false);
+let deepWork = new Book("Cal Newport", "Deep Work", 255, "Read?");
+let atomicHabits = new Book("James Clear", "Atomic Habits", 300, "Read?");
 
 function addBookToLibrary(book) {
   myLibrary.push(book);
@@ -30,9 +30,10 @@ function displayBooks(libraryArray) {
     let input = document.createElement("input");
     let span = document.createElement("span");
 
+    readQ.style.marginLeft = "87%";
+
     label.className = "switch";
     input.type = "checkbox";
-    // span.className = "slider round";
     span.classList.add("slider", "round");
 
     label.append(input);
@@ -65,8 +66,12 @@ function displayBooks(libraryArray) {
     input.addEventListener("click", function () {
       if (card.style.backgroundColor === "blanchedalmond") {
         card.style.backgroundColor = "#E96479";
+        readQ.style.marginLeft = "74%";
+        readQ.innerText = "Read: ❌";
       } else {
         card.style.backgroundColor = "blanchedalmond";
+        readQ.style.marginLeft = "75%";
+        readQ.innerText = "Read: ✔️";
       }
     });
   }
