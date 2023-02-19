@@ -24,6 +24,7 @@ function popUpForm() {
   let title = document.createElement("p");
   title.innerText = "Add new book";
   divForm.id = "divForm";
+  form.id = "form";
 
   let Title = document.createElement("input");
   let author = document.createElement("input");
@@ -31,6 +32,13 @@ function popUpForm() {
 
   let submit = document.createElement("button");
 
+  submit.innerText = "Submit";
+  title.innerText = "Add new book";
+  Title.placeholder = "Title";
+  author.placeholder = "Author";
+  pages.placeholder = "pages";
+
+  form.append(title);
   form.append(Title);
   form.append(author);
   form.append(pages);
@@ -39,7 +47,7 @@ function popUpForm() {
 
   document.body.append(divForm);
 }
-
+popUpForm();
 let addBttn = document.querySelector("#add");
 addBttn.addEventListener("click", function () {
   popUpForm();
