@@ -30,8 +30,6 @@ function displayBooks(libraryArray) {
     let input = document.createElement("input");
     let span = document.createElement("span");
 
-    readQ.style.marginLeft = "87%";
-
     label.className = "switch";
     input.type = "checkbox";
     span.classList.add("slider", "round");
@@ -66,11 +64,9 @@ function displayBooks(libraryArray) {
     input.addEventListener("click", function () {
       if (card.style.backgroundColor === "blanchedalmond") {
         card.style.backgroundColor = "#E96479";
-        readQ.style.marginLeft = "74%";
         readQ.innerText = "Read: ❌";
       } else {
         card.style.backgroundColor = "blanchedalmond";
-        readQ.style.marginLeft = "75%";
         readQ.innerText = "Read: ✔️";
       }
     });
