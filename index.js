@@ -16,19 +16,6 @@ function addBookToLibrary(book) {
 }
 
 addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-addBookToLibrary(deepWork);
-
 addBookToLibrary(atomicHabits);
 
 let divCardsContainer = document.querySelector("#container");
