@@ -8,6 +8,7 @@ function Book(author, title, noOfPages, readQ) {
 }
 
 let deepWork = new Book("Cal Newport", "Deep Work", 255, "Read?");
+
 let atomicHabits = new Book("James Clear", "Atomic Habits", 300, "Read?");
 
 function addBookToLibrary(book) {
@@ -15,6 +16,19 @@ function addBookToLibrary(book) {
 }
 
 addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+addBookToLibrary(deepWork);
+
 addBookToLibrary(atomicHabits);
 
 let divCardsContainer = document.querySelector("#container");

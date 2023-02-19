@@ -31,6 +31,7 @@ body {
   height: 100%;
   background-color: #f0eef1;
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
   padding: 1em;
 }
