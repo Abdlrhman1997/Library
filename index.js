@@ -18,6 +18,12 @@ function addBookToLibrary(book) {
 addBookToLibrary(deepWork);
 addBookToLibrary(atomicHabits);
 
+let Titlec;
+let titlec;
+let authorc;
+let pagesc;
+let submitc;
+
 function popUpForm() {
   let divForm = document.createElement("div");
   let form = document.createElement("forum");
@@ -30,8 +36,13 @@ function popUpForm() {
   let author = document.createElement("input");
   let pages = document.createElement("input");
 
-  let submit = document.createElement("button");
+  Titlec = Title;
+  titlec = title;
+  authorc = author;
+  pagesc = pages;
 
+  let submit = document.createElement("button");
+  submitc = submit;
   submit.innerText = "Submit";
   title.innerText = "Add new book";
   Title.placeholder = "Title";
@@ -45,16 +56,37 @@ function popUpForm() {
   form.append(submit);
   divForm.append(form);
 
+  divForm.style.display = "none";
   document.body.append(divForm);
 }
+popUpForm();
+let divFormHolder = document.querySelector("#divForm");
 
 let addBttn = document.querySelector("#add");
 let overlay = document.querySelector("#overlay");
 addBttn.addEventListener("click", function () {
-  popUpForm();
-
+  divFormHolder.style.display = "initial";
   overlay.classList.add("active");
+  overlay.style.display = "initial";
 });
+
+window.onload = function () {
+  document.onclick = function (e) {
+    if (
+      e.target.id !== "divForm" &&
+      e.target.id !== "add" &&
+      e.target.id !== "form" &&
+      e.target !== titlec &&
+      e.target !== Titlec &&
+      e.target !== authorc &&
+      e.target !== pagesc &&
+      e.target !== submitc
+    ) {
+      divFormHolder.style.display = "none";
+      document.querySelector("#overlay").style.display = "none";
+    }
+  };
+};
 
 let divCardsContainer = document.querySelector("#container");
 function displayBooks(libraryArray) {
