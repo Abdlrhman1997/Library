@@ -18,11 +18,19 @@ function addBookToLibrary(book) {
 addBookToLibrary(deepWork);
 addBookToLibrary(atomicHabits);
 
-let Titlec;
 let titlec;
+let Titlec;
 let authorc;
 let pagesc;
 let submitc;
+
+function submit() {
+  let newBook = new Book(authorc.value, Titlec.value, pagesc.value, "Read?");
+  addBookToLibrary(newBook);
+  displayBooks(myLibrary, myLibrary.length - 1);
+  divFormHolder.style.display = "none";
+  document.querySelector("#overlay").style.display = "none";
+}
 
 function popUpForm() {
   let divForm = document.createElement("div");
@@ -35,6 +43,13 @@ function popUpForm() {
   let Title = document.createElement("input");
   let author = document.createElement("input");
   let pages = document.createElement("input");
+
+  Title.type = "text";
+  author.type = "text";
+
+  pages.type = "number";
+  pages.min = "0";
+  pages.oninput = "validity.valid||(value='')";
 
   Titlec = Title;
   titlec = title;
@@ -88,9 +103,11 @@ window.onload = function () {
   };
 };
 
+submitc.addEventListener("click", submit);
+
 let divCardsContainer = document.querySelector("#container");
-function displayBooks(libraryArray) {
-  for (let i = 0; i < libraryArray.length; i++) {
+function displayBooks(libraryArray, count) {
+  for (let i = count; i < libraryArray.length; i++) {
     let card = document.createElement("div");
     let title = document.createElement("p");
     let author = document.createElement("p");
@@ -144,4 +161,4 @@ function displayBooks(libraryArray) {
   }
 }
 
-displayBooks(myLibrary);
+displayBooks(myLibrary, 0);
