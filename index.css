@@ -52,7 +52,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  background-color: #bfdce5;
+  background-color: #85cdfd;
   padding: 1em;
 }
 
@@ -87,7 +87,7 @@ body {
 }
 
 #divForm {
-  background-color: #bfdce5;
+  background-color: #85cdfd;
   display: flex;
   z-index: 10;
   /* flex-direction: column; */

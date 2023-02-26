@@ -44,11 +44,8 @@ function popUpForm() {
   let author = document.createElement("input");
   let pages = document.createElement("input");
 
-  Title.type = "text";
-  author.type = "text";
-
   pages.type = "number";
-  pages.min = "0";
+  pages.min = "10";
   pages.oninput = "validity.valid||(value='')";
 
   Titlec = Title;
@@ -57,6 +54,8 @@ function popUpForm() {
   pagesc = pages;
 
   let submit = document.createElement("button");
+  submit.type = "submit";
+  submit.form = "form";
   submitc = submit;
   submit.innerText = "Submit";
   title.innerText = "Add new book";
