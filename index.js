@@ -47,10 +47,13 @@ function popUpForm() {
 
   document.body.append(divForm);
 }
-popUpForm();
+
 let addBttn = document.querySelector("#add");
+let overlay = document.querySelector("#overlay");
 addBttn.addEventListener("click", function () {
   popUpForm();
+
+  overlay.classList.add("active");
 });
 
 let divCardsContainer = document.querySelector("#container");
